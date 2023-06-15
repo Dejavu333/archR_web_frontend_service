@@ -1,0 +1,12 @@
+<script>
+    let time = new Date().toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric'
+    });
+    export let sectionName = '';
+</script>
+
+<div class="projects-section-header">
+    <p>{sectionName}</p>
+    <p class="time">{time}</p>
+</div>
