@@ -3,6 +3,8 @@ import MessageBox from "./MessageBox.svelte";
 import MessagesCloseButton from "./MessagesCloseButton.svelte";
 import SectionHeader from "./SectionHeader.svelte";
 </script>
+<!-------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
 
 <div class="messages-section">
     <MessagesCloseButton />
@@ -25,3 +27,5 @@ import SectionHeader from "./SectionHeader.svelte";
             time="Dec, 11" />
     </div>
 </div>
+<!-------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->

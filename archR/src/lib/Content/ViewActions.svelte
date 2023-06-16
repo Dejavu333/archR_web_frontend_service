@@ -1,31 +1,25 @@
 <script>
-AddListViewˇGridViewToggle();
+import { S } from '../../utility.js';
 
-function AddListViewˇGridViewToggle() {
-    document.addEventListener('DOMContentLoaded', function() {
-        const listView = document.querySelector('.list-view');
-        const gridView = document.querySelector('.grid-view');
-        const projectsList = document.querySelector('.project-boxes');
-        listView.addEventListener('click', function() {
-            gridView.classList.remove('active');
-            listView.classList.add('active');
-            projectsList.classList.remove('jsGridView');
-            projectsList.classList.add('jsListView');
-        });
-        gridView.addEventListener('click', function() {
-            gridView.classList.add('active');
-            listView.classList.remove('active');
-            projectsList.classList.remove('jsListView');
-            projectsList.classList.add('jsGridView');
-        });
-    });
+function switchToGridView() {
+    S('.grid-view').classList.add('active');
+    S('.list-view').classList.remove('active');
+    S('.project-boxes').classList.remove('jsListView');
+    S('.project-boxes').add('jsGridView');
 }
 
+function switchToListView() {
+    S('.grid-view').classList.remove('active');
+    S('.list-view').classList.add('active');
+    S('.project-boxes').classList.remove('jsGridView');
+    S('.project-boxes').classList.add('jsListView');
+}
 
 </script>
-
+<!-------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
 <div class="view-actions">
-    <button class="view-btn list-view" title="List View">
+    <button class="view-btn list-view" title="List View" on:click={switchToListView}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" class="feather feather-list">
@@ -38,7 +32,7 @@ function AddListViewˇGridViewToggle() {
         </svg>
     </button>
 
-    <button class="view-btn grid-view active" title="Grid View">
+    <button class="view-btn grid-view active" title="Grid View" on:click={switchToGridView}>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" class="feather feather-grid">
@@ -49,3 +43,5 @@ function AddListViewˇGridViewToggle() {
         </svg>
     </button>
 </div>
+<!-------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->

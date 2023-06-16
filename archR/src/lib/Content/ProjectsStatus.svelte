@@ -3,6 +3,8 @@ export let inProductionCount = 0;
 export let underDevelopmentCount = 0;
 export let totalProjectsCount = 0;
 </script>
+<!-------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
 
 <div class="projects-status">
     <div class="item-status">
@@ -18,3 +20,5 @@ export let totalProjectsCount = 0;
         <span class="status-type">Total Projects</span>
     </div>
 </div>
+<!-------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
